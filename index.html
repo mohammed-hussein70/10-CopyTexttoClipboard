@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Copy Text to Clipboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       #input,
       #button {
@@ -14,11 +18,40 @@
       #button {
         cursor: pointer;
       }
+      form {
+        width: 100%;
+      }
+      .input {
+        width: 100px;
+        padding: 12px 20px 12px 35px;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        background-image: url(searchicon.png);
+        transition: 0.6s ease;
+        &:focus {
+          width: 50%;
+        }
+      }
+      @media (max-width: 500px) {
+        .input:focus {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
+    <!-- copy text  -->
+    <h2>copy text</h2>
     <input type="text" id="input" value="Hello World" />
     <button id="button" onclick="copy()">Copy text</button>
+    <br />
+
+    <h2>Animated Search Form</h2>
+    <!-- Animated Search Form -->
+    <form action="">
+      <input type="search" placeholder="Search..." class="input" />
+    </form>
+
     <script src="main.js"></script>
   </body>
 </html>
